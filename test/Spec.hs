@@ -4,6 +4,7 @@ import TestRunning
 import TestParsers
 import TestCPT
 import TestAST
+import TestDatatypes
 
 main :: IO ()
 main = defaultMain $ testGroup "Tests"
@@ -47,5 +48,7 @@ main = defaultMain $ testGroup "Tests"
     testAstElemIndex,
     testGetAstAtIndex,
     testGetArgsForCall,
-    testGetArgsForCall2
+    testGetArgsForCall2,
+    testCreateReferenceSet,
+    testCreateLambdaSet
   ]

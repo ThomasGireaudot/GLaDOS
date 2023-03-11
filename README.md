@@ -13,7 +13,7 @@ You can find the subject [here](./res/B-FUN-500_GLaDOS.pdf).
 
 ### Installation
 
-> Make sure to have [stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/) and make installed
+> Make sure to have [stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/) and [make] (https://www.gnu.org/software/make/) installed
 
 ```
 git clone git@github.com:EpitechPromo2025/B-FUN-500-LIL-5-2-glados-hugo.delille.git
@@ -72,7 +72,7 @@ if (b == y) (+ 1 b) (+ 1 y)
 9 % 5
 ```
 
-### Launch unit testing
+## Launch unit testing
 ```
 stack test
 ```
