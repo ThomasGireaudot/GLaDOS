@@ -24,6 +24,10 @@ cptToAST (List [Symbol "if", c, t, e]) =
     cptToAST t >>= \t' ->
       cptToAST e >>= \e' ->
         Just (Condition c' t' e')
+cptToAST (List [Symbol "while", c, b]) =
+  cptToAST c >>= \c' ->
+    cptToAST b >>= \b' ->
+      Just (Loop c' b')
 cptToAST (List [x, Symbol sign, y]) =
   cptToAST x >>= \astX ->
     cptToAST y >>= \astY -> case sign of

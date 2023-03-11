@@ -151,9 +151,7 @@ runAST (Condition c t e) ref lset = case callArgsFromRefs c ref of
       Just e' -> case evalAST (Condition c' t' e') lset of
         Nothing -> putStrLn "*** ERROR : a Condition error has occured."
         Just x -> runAST x ref lset
--- Launch a procedure with 0 arguments, and 1 or more parameters
-runAST (Procedure (_ : _) _ Nothing) _ _ = putStrLn "#procedure"
-runAST _ _ _ = putStrLn "*** ERROR : Out of pattern."
+runAST _ _ _ = putStrLn "*** ERROR : Syntax error."
 
 -- Interpreter loop
 runPrompt :: ReferenceSet -> LambdaSet -> IO ()

@@ -4,18 +4,6 @@ module CPTManipulation where
 
 import Datatypes (Cpt (..))
 
--- getNbr :: Cpt -> Maybe Int
--- getNbr (Nbr i) = Just i
--- getNbr _ = Nothing
-
--- getSymbol :: Cpt -> Maybe String
--- getSymbol (Symbol str) = Just str
--- getSymbol _ = Nothing
-
--- getList :: Cpt -> Maybe [Cpt]
--- getList (List l) = Just l
--- getList _ = Nothing
-
 printTreeList :: [Cpt] -> String
 printTreeList (x : y : xs) = printTree x ++ ", " ++ printTreeList (y : xs)
 printTreeList (x : _) = printTree x

@@ -14,8 +14,6 @@ data Ast
   | Ref String
   | Val Int
   | Boolean Bool
-  -- params - call - maybe args
-  | Procedure [Ast] Ast (Maybe [Ast])
   -- nom - params - procedure
   | Lambda Ast [Ast] Ast
   | Condition Ast Ast Ast
