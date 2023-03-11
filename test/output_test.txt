@@ -1,0 +1,75 @@
+[33m###################################[0m
+
+
+[34mEntrée : define x 5[0m
+[33mAucune sortie attendue pour cette entrée[0m
+
+[34mEntrée : 5 + 6[0m
+Sortie attendue : 11
+Sortie obtenue : 11
+[32mTest : OK[0m
+
+[34mEntrée : 5 - 6[0m
+Sortie attendue : -1
+Sortie obtenue : -1
+[32mTest : OK[0m
+
+[34mEntrée : 5 * 5[0m
+Sortie attendue : 25
+Sortie obtenue : 25
+[32mTest : OK[0m
+
+[34mEntrée : div 5 5[0m
+Sortie attendue : 1
+Sortie obtenue : 1
+[32mTest : OK[0m
+
+[34mEntrée : mod 6 4[0m
+Sortie attendue : 2
+Sortie obtenue : 2
+[32mTest : OK[0m
+
+[34mEntrée : eq? 5 6[0m
+Sortie attendue : #f
+Sortie obtenue : #f
+[32mTest : OK[0m
+
+[34mEntrée : eq? 5 5[0m
+Sortie attendue : #t
+Sortie obtenue : #t
+[32mTest : OK[0m
+
+[34mEntrée : if (eq? 5 5) 1 2[0m
+Sortie attendue : 1
+Sortie obtenue : 1
+[32mTest : OK[0m
+
+[34mEntrée : if (eq? 5 6) 1 2[0m
+Sortie attendue : 2
+Sortie obtenue : 2
+[32mTest : OK[0m
+
+[34mEntrée : define (add a b) (+ a b)[0m
+[33mAucune sortie attendue pour cette entrée[0m
+
+[34mEntrée : define (test a b) (+ a (add a b))[0m
+[33mAucune sortie attendue pour cette entrée[0m
+
+[34mEntrée : (add 2 3)[0m
+Sortie attendue : 5
+Sortie obtenue : failed first
+[31mTest : [0m[31mERREUR[0m
+
+[34mEntrée : (test 2 3)[0m
+Sortie attendue : 7
+Sortie obtenue : failed first
+[31mTest : [0m[31mERREUR[0m
+
+[34mEntrée : define (equal a b) (if (eq? a b) 1 0)[0m
+[33mAucune sortie attendue pour cette entrée[0m
+
+[34mEntrée : define (test a b) (+ a (+ a b))[0m
+[33mAucune sortie attendue pour cette entrée[0m
+
+
+[33m###################################[0m
