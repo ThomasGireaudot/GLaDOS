@@ -21,6 +21,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: clean fclean all
-
-tests:
-	stack test

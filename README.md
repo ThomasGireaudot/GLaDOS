@@ -13,7 +13,7 @@ You can find the subject [here](./res/B-FUN-500_GLaDOS.pdf).
 
 ### Installation
 
-> Make sure to have [stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/) installed
+> Make sure to have [stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/) and make installed
 
 ```
 git clone git@github.com:EpitechPromo2025/B-FUN-500-LIL-5-2-glados-hugo.delille.git
@@ -21,7 +21,7 @@ git clone git@github.com:EpitechPromo2025/B-FUN-500-LIL-5-2-glados-hugo.delille.
 
 ### Usage
 ```
-make re
+make
 ```
 
 ```
@@ -72,8 +72,13 @@ if (b == y) (+ 1 b) (+ 1 y)
 9 % 5
 ```
 
+### Launch unit testing
+```
+stack test
+```
+
 
 ## Contributors
 
-| [<img src="https://github.com/gabinheylen.png?size=85" width=85><br><sub>Gabin Heylen</sub>](https://github.com/gabinheylen) | [<img src="https://github.com/ThomasGireaudot.png?size=85" width=85><br><sub>Thomas Gireaudot</sub>](https://github.com/ThomasGireaudot) | [<img src="https://github.com/hugodml.png?size=85" width=85><br><sub>Hugo Demelenaere</sub>](https://github.com/hugodml) | [<img src="https://github.com/LunessFr.png?size=85" width=85><br><sub>Hugo Delille</sub>](https://github.com/LunessFr) | [<img src="https://github.com/AI-Genesix.png?size=85" width=85><br><sub>Maxime Launay</sub>](https://github.com/AI-Genesix) | [<img src="https://github.com/Enguer2.png?size=85" width=85><br><sub>Enguerrand Van-De-Velde</sub>](https://github.com/Enguer2)
+| [<img src="https://github.com/gabinheylen.png?size=85" width=85><br><sub>Gabin Heylen</sub>](https://github.com/gabinheylen) | [<img src="https://github.com/ThomasGireaudot.png?size=85" width=85><br><sub>Thomas Gireaudot</sub>](https://github.com/ThomasGireaudot)
 | :---: | :---: | :---: | :---: | :---: | :---: |
