@@ -77,6 +77,13 @@ lowerAst (Val a) (Val b)
   | otherwise = Just (Boolean False)
 lowerAst _ _ = Nothing
 
+upperAst :: Ast -> Ast -> Maybe Ast
+upperAst (Val a) (Val b)
+  | a == b = Just (Boolean False)
+  | a > b = Just (Boolean True)
+  | otherwise = Just (Boolean False)
+upperAst _ _ = Nothing
+
 extractLambdaFromSet :: Ast -> LambdaSet -> Maybe Ast
 extractLambdaFromSet _ (LambdaSet []) = Nothing
 extractLambdaFromSet (Ref name) (LambdaSet ((Lambda (Ref lname) args procedure) : xs))
@@ -173,6 +180,10 @@ evalAST (Call (Ref "<") [ca, cb]) set =
   evalAST ca set >>= \a ->
     evalAST cb set >>= \b ->
       lowerAst a b
+evalAST (Call (Ref ">") [ca, cb]) set =
+  evalAST ca set >>= \a ->
+    evalAST cb set >>= \b ->
+      upperAst a b
 evalAST (Call cname cargs) set = case extractLambdaFromSet cname set of
   Just (Lambda _ params (Call cname2 cargs2)) -> evalAST (Call cname2 (getArgsForCall2 params cargs cargs2)) set
   Just (Lambda _ params (Condition c t e)) -> getArgsForCall params cargs (Condition c t e) >>= \cond -> evalAST cond set

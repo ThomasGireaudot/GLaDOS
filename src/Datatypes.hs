@@ -14,11 +14,11 @@ data Ast
   | Ref String
   | Val Int
   | Boolean Bool
-  -- nom - params - procedure
-  | Lambda Ast [Ast] Ast
+  | -- nom - params - procedure
+    Lambda Ast [Ast] Ast
   | Condition Ast Ast Ast
-  -- Condition - body
-  | Loop Ast Ast
+  | -- Condition - body
+    Loop Ast Ast
   deriving (Show)
 
 data ReferenceInt = ReferenceInt

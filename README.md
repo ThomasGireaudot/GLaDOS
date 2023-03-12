@@ -66,6 +66,10 @@ if (b == y) (+ 1 b) (+ 1 y)
 
 '=' equal
 
+'<' less than
+
+'>' more than
+
 ```
 5 + 6
 4 / 7

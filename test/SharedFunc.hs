@@ -1,9 +1,8 @@
 module SharedFunc where
 
 import Datatypes
-import Running
-import Datatypes
 import Parsers
+import Running
 
 instance Eq ReferenceBool where
   (ReferenceBool nB valB) == (ReferenceBool nB' valB') = nB == nB' && valB == valB'
@@ -23,6 +22,7 @@ instance Eq Ast where
   (Procedure a b c) == (Procedure d e f) = a == d && b == e && c == f
   (Lambda a b c) == (Lambda d e f) = a == d && b == e && c == f
   (Condition a b c) == (Condition d e f) = a == d && b == e && c == f
+  (Loop c b) == (Loop c' b') = c == c' && b == b'
   _ == _ = False
 
 instance Eq Cpt where
@@ -30,8 +30,6 @@ instance Eq Cpt where
   (Symbol x) == (Symbol y) = x == y
   (List xs) == (List ys) = xs == ys
   _ == _ = False
-
-
 
 instance Eq LambdaSet where
   (LambdaSet l1) == (LambdaSet l2) = l1 == l2
